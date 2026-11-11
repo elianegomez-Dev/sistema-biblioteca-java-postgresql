@@ -63,7 +63,7 @@ java Main
 *Capturas de tela do sistema em execução serão adicionadas nesta seção.*
 
 
-## Banco de Dados PostgreSQL
+## 🐘 Banco de Dados PostgreSQL
 
 O projeto utiliza PostgreSQL para armazenar os dados da biblioteca.
 
