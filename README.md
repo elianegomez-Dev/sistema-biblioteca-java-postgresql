@@ -58,6 +58,8 @@ java Main
 
 ## 🖥️ Demonstração do projeto
 
+<img width="1357" height="712" alt="execucao-java" src="https://github.com/user-attachments/assets/0f89057b-6b5f-4d48-9573-a997d634bed8" />
+
 *Capturas de tela do sistema em execução serão adicionadas nesta seção.*
 
 ## 🗄️ Banco de dados
