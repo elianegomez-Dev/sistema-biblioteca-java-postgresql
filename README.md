@@ -10,7 +10,7 @@ Desenvolver um sistema simples de biblioteca, aplicando conceitos fundamentais d
 
 - Java 17
 - Programação Orientada a Objetos (POO)
-- PostgreSQL *(etapa de desenvolvimento)*
+- PostgreSQL 
 
 ## ✨ Funcionalidades
 
