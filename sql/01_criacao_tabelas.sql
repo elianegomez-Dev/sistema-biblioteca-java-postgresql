@@ -1,0 +1,25 @@
+
+-- SISTEMA DE BIBLIOTECA
+-- CRIACAO DAS TABELAS
+
+CREATE TABLE item (
+    id_item INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    codigo VARCHAR(20) NOT NULL UNIQUE,
+    titulo VARCHAR(150) NOT NULL,
+    tipo VARCHAR(20) NOT NULL CHECK (tipo IN ('Livro', 'Revista')),
+    disponivel BOOLEAN NOT NULL DEFAULT TRUE
+);
+
+CREATE TABLE usuario (
+    id_usuario INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    tipo VARCHAR(20) NOT NULL CHECK (tipo IN ('Aluno', 'Professor'))
+);
+
+CREATE TABLE emprestimo (
+    id_emprestimo INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id_item INTEGER NOT NULL REFERENCES item(id_item),
+    id_usuario INTEGER NOT NULL REFERENCES usuario(id_usuario),
+    data_emprestimo DATE NOT NULL DEFAULT CURRENT_DATE,
+    data_devolucao DATE
+);
