@@ -62,14 +62,32 @@ java Main
 
 *Capturas de tela do sistema em execução serão adicionadas nesta seção.*
 
-## 🗄️ Banco de dados
 
-A etapa de desenvolvimento com PostgreSQL incluirá:
+## Banco de Dados PostgreSQL
 
-- Criação das tabelas `item`, `usuario` e `emprestimo`.
-- Relacionamentos e chaves estrangeiras.
-- Inserção de dados.
-- Consultas SQL para relatórios e controle de empréstimos.
+O projeto utiliza PostgreSQL para armazenar os dados da biblioteca.
+
+Foram criadas três tabelas:
+
+- **item:** armazena livros e revistas.
+- **usuario:** armazena alunos e professores.
+- **emprestimo:** registra os empréstimos e as devoluções.
+
+### Consultas SQL
+
+O projeto possui consultas para:
+
+- Listar o catálogo da biblioteca.
+- Consultar empréstimos em aberto.
+- Calcular o total de multas por usuário.
+- Identificar itens que nunca foram emprestados.
+
+Os scripts SQL estão disponíveis na pasta `sql`:
+
+- `01_criacao_tabelas.sql`
+- `02_dados_iniciais.sql`
+- `03_consultas.sql`
+  
 
 ## 📚 Aprendizados
 
