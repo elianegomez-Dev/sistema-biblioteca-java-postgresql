@@ -10,12 +10,16 @@ public class Main {
 
         Revista revista1 = new Revista("R001", "National Geographic");
         Revista revista2 = new Revista("R002", "Ciencia Hoje");
-        biblioteca.cadastrarItem(revista2);
-        Aluno aluno = new Aluno("Ana");
+
+        DVD dvd1 = new DVD("D001", "Interestelar");
+
+        Aluno aluno = new Aluno("Lia");
         Professor professor = new Professor("Carlos");
 
+        biblioteca.cadastrarItem(revista2);
         biblioteca.cadastrarItem(livro1);
         biblioteca.cadastrarItem(livro2);
+        biblioteca.cadastrarItem(dvd1);
         biblioteca.cadastrarItem(revista1);
 
         biblioteca.cadastrarUsuario(aluno);
@@ -24,10 +28,12 @@ public class Main {
         biblioteca.emprestar(livro1, aluno);
         biblioteca.emprestar(livro2, aluno);
         biblioteca.emprestar(revista1, aluno);
-
-// Tentativa do quarto emprestimo
         biblioteca.emprestar(revista2, aluno);
+
+        biblioteca.devolver(livro1, professor);
+
         biblioteca.devolver(livro1, aluno);
+
         biblioteca.listarAcervo();
     }
 }
