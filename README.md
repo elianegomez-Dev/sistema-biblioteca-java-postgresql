@@ -19,13 +19,13 @@ Desenvolver um sistema simples de biblioteca para gerenciar itens, usuários, em
 
 ## ✨ Funcionalidades
 
-
-- Cadastro de livros e revistas.
+- Cadastro de livros, revistas e DVDs.
 - Cadastro de alunos e professores.
 - Realização de empréstimos.
 - Controle de disponibilidade dos itens.
-- Limite de empréstimos por categoria de usuário.
-- Devolução de itens.
+- Limite de empréstimos por tipo de usuário.
+- Controle de devoluções.
+- Verificação do usuário responsável pelo empréstimo.
 - Listagem do acervo da biblioteca.
 - Armazenamento e consulta de dados no PostgreSQL.
 
@@ -33,15 +33,20 @@ Desenvolver um sistema simples de biblioteca para gerenciar itens, usuários, em
 ## 📋 Regras de negócio
 
 
-| Categoria | Prazo de empréstimo | Multa diária |
-|---|---:|---:|
+| Categoria | Prazo | Multa diária |
+|---|---|---|
 | Livro | 14 dias | R$ 0,50 |
 | Revista | 7 dias | R$ 1,00 |
+| DVD | 3 dias | R$ 2,00 |
+
+### Limite de empréstimos
 
 | Usuário | Limite de empréstimos |
 |---|---:|
 | Aluno | 3 itens |
 | Professor | 5 itens |
+
+
 
 
 ## 📂 Estrutura do projeto
@@ -57,6 +62,7 @@ Desenvolver um sistema simples de biblioteca para gerenciar itens, usuários, em
 - `Usuario.java` — classe abstrata dos usuários.
 - `Aluno.java` — representação dos alunos.
 - `Professor.java` — representação dos professores.
+-  `DVD.java` — representação dos DVDs.
 
 ### Arquivos SQL
 
