@@ -1,10 +1,13 @@
 # Sistema de Gerenciamento de Biblioteca
 
+
 Sistema de gerenciamento de biblioteca desenvolvido em Java, utilizando conceitos de Programação Orientada a Objetos (POO) e banco de dados PostgreSQL.
+
 
 ## 🎯 Objetivo do projeto
 
 Desenvolver um sistema simples de biblioteca para gerenciar itens, usuários, empréstimos e devoluções, aplicando conceitos de programação e banco de dados.
+
 
 ## 🛠️ Tecnologias utilizadas
 
@@ -13,7 +16,9 @@ Desenvolver um sistema simples de biblioteca para gerenciar itens, usuários, em
 - PostgreSQL
 - SQL
 
+
 ## ✨ Funcionalidades
+
 
 - Cadastro de livros e revistas.
 - Cadastro de alunos e professores.
@@ -24,7 +29,9 @@ Desenvolver um sistema simples de biblioteca para gerenciar itens, usuários, em
 - Listagem do acervo da biblioteca.
 - Armazenamento e consulta de dados no PostgreSQL.
 
+
 ## 📋 Regras de negócio
+
 
 | Categoria | Prazo de empréstimo | Multa diária |
 |---|---:|---:|
@@ -36,7 +43,9 @@ Desenvolver um sistema simples de biblioteca para gerenciar itens, usuários, em
 | Aluno | 3 itens |
 | Professor | 5 itens |
 
+
 ## 📂 Estrutura do projeto
+
 
 ### Arquivos Java
 
@@ -68,12 +77,14 @@ java Main
 
 ## 🖥️ Demonstração do projeto
 
+
 <p align="center">
-  <img  width="1357" height="712" alt="execucao-java" src="https://github.com/user-attachments/assets/0f89057b-6b5f-4d48-9573-a997d634bed8" >
+  <img  width="1357" height="500" alt="execucao-java" src="https://github.com/user-attachments/assets/0f89057b-6b5f-4d48-9573-a997d634bed8" >
 </p>
 
 
 ## 🐘 Banco de dados PostgreSQL
+
 
 O banco de dados `biblioteca_db` utiliza três tabelas:
 
