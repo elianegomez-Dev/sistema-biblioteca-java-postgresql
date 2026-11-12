@@ -1,39 +1,46 @@
 
--- DADOS INICIAIS DO SISTEMA DE BIBLIOTECA
+-- EXERCICIO 2: DADOS INICIAIS
 
--- CADASTRO DOS ITENS
-INSERT INTO item (codigo, titulo, tipo, disponivel)
+-- CADASTRO DE ITENS
+INSERT INTO item
+(codigo, titulo, tipo, autor, edicao, disponivel)
 VALUES
-('L001', 'Dom Casmurro', 'Livro', FALSE),
-('L002', 'O Pequeno Principe', 'Livro', TRUE),
-('R001', 'National Geographic', 'Revista', TRUE),
-('R002', 'Ciencia Hoje', 'Revista', TRUE);
+('L001', 'Dom Casmurro', 'Livro', 'Machado de Assis', NULL, FALSE),
+('L002', 'O Pequeno Principe', 'Livro', 'Antoine de Saint-Exupery', NULL, TRUE),
+('R001', 'National Geographic', 'Revista', NULL, 'Edicao 2026', TRUE),
+('R002', 'Ciencia Hoje', 'Revista', NULL, 'Edicao 2026', TRUE);
 
--- CADASTRO DOS USUARIOS
-INSERT INTO usuario (nome, tipo)
+-- CADASTRO DE USUARIOS
+INSERT INTO usuario (nome, tipo, limite_itens)
 VALUES
-('Ana', 'Aluno'),
-('Carlos', 'Professor');
+('Ana', 'Aluno', 3),
+('Carlos', 'Professor', 5);
 
 -- EMPRESTIMO EM ABERTO
 INSERT INTO emprestimo
-(id_item, id_usuario, data_emprestimo, data_devolucao)
+(item_id, usuario_id, data_retirada,
+ data_devolucao_prevista, data_devolucao, valor_multa)
 VALUES
 (
-    (SELECT id_item FROM item WHERE codigo = 'L001'),
-    (SELECT id_usuario FROM usuario WHERE nome = 'Ana'),
+    (SELECT id FROM item WHERE codigo = 'L001'),
+    (SELECT id FROM usuario WHERE nome = 'Ana'),
     CURRENT_DATE - 20,
-    NULL
+    CURRENT_DATE - 6,
+    NULL,
+    3.00
 );
 
--- EMPRESTIMO DEVOLVIDO
-
+-- EMPRESTIMO JA DEVOLVIDO
 INSERT INTO emprestimo
-(id_item, id_usuario, data_emprestimo, data_devolucao)
+(item_id, usuario_id, data_retirada,
+ data_devolucao_prevista, data_devolucao, valor_multa)
 VALUES
 (
-    (SELECT id_item FROM item WHERE codigo = 'L002'),
-    (SELECT id_usuario FROM usuario WHERE nome = 'Carlos'),
+    (SELECT id FROM item WHERE codigo = 'L002'),
+    (SELECT id FROM usuario WHERE nome = 'Carlos'),
     CURRENT_DATE - 20,
-    CURRENT_DATE - 1
+    CURRENT_DATE - 6,
+    CURRENT_DATE - 1,
+    2.50
 );
+
