@@ -1,50 +1,40 @@
 
--- LISTAR O CATALOGO
-SELECT *
+-- EXERCICIO 3: CONSULTAS SQL
+
+-- LISTAR TODO O ACERVO
+SELECT
+    codigo,
+    titulo,
+    tipo,
+    disponivel
 FROM item;
 
-
---  EMPRESTIMOS EM ABERTO
-SELECT
-  u.nome AS usuario,
-  i.titulo AS item,
-  e.data_emprestimo
-FROM emprestimo e
-JOIN usuario u ON e.id_usuario = u.id_usuario
-JOIN item i ON e.id_item = i.id_item
-WHERE e.data_devolucao IS NULL;
-
-
--- TOTAL DE MULTAS POR USUARIO
+--  LISTAR EMPRESTIMOS EM ABERTO
 SELECT
     u.nome AS usuario,
-    SUM(
-        GREATEST(
-            COALESCE(e.data_devolucao, CURRENT_DATE)
-            - (e.data_emprestimo +
-                CASE
-             WHEN i.tipo = 'Livro' THEN 14
-             WHEN i.tipo = 'Revista' THEN 7
-                END
-            ),
-            0
-        ) *
-        CASE
-            WHEN i.tipo = 'Livro' THEN 0.50
-            WHEN i.tipo = 'Revista' THEN 1.00
-        END
-    ) AS total_multa
+    i.titulo AS item,
+    e.data_retirada,
+    e.data_devolucao_prevista
 FROM emprestimo e
-JOIN usuario u ON e.id_usuario = u.id_usuario
-JOIN item i ON e.id_item = i.id_item
-GROUP BY u.id_usuario, u.nome;
+JOIN usuario u ON e.usuario_id = u.id
+JOIN item i ON e.item_id = i.id
+WHERE e.data_devolucao IS NULL;
 
-
--- ITENS NUNCA EMPRESTADOS
+-- CALCULAR O TOTAL DE MULTAS POR USUARIO
 SELECT
-  i.codigo,
-  i.titulo,
-  i.tipo
+    u.nome AS usuario,
+    SUM(e.valor_multa) AS total_multa
+FROM usuario u
+JOIN emprestimo e ON u.id = e.usuario_id
+GROUP BY u.id, u.nome;
+
+--  LISTAR ITENS QUE NUNCA FORAM EMPRESTADOS
+SELECT
+    i.codigo,
+    i.titulo,
+    i.tipo,
+    i.disponivel
 FROM item i
-LEFT JOIN emprestimo e ON i.id_item = e.id_item
-WHERE e.id_item IS NULL;
+LEFT JOIN emprestimo e ON i.id = e.item_id
+WHERE e.item_id IS NULL;
+
