@@ -85,9 +85,13 @@ java Main
 
 
 <p align="center">
-  <img  width="1357" height="500" alt="execucao-java" src="https://github.com/user-attachments/assets/0f89057b-6b5f-4d48-9573-a997d634bed8" >
+  <img <img width="1346" height="500" alt="java B" src="https://github.com/user-attachments/assets/a19da919-3587-427f-a000-88c4c36435f1" />
+" >
+<p align="center">
+  <img <img width="1351" height="191" alt="java 2" src="https://github.com/user-attachments/assets/a82cc292-0ac5-4c84-a49e-d1b6bb490fc4" />
+ />
+" >
 </p>
-
 
 ## 🐘 Banco de dados PostgreSQL
 
