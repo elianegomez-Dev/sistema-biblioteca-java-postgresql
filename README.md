@@ -85,8 +85,7 @@ java Main
 
 
 <p align="center">
-  <img <img width="1346" height="500" alt="java B" src="https://github.com/user-attachments/assets/a19da919-3587-427f-a000-88c4c36435f1" >
-  <img <img width="1351" height="191" alt="java 2" src="https://github.com/user-attachments/assets/a82cc292-0ac5-4c84-a49e-d1b6bb490fc4" > 
+  <img <img width="1357" height="550" alt="image" src="https://github.com/user-attachments/assets/cba4e92c-8922-4486-8432-258aedd34df5" >
 </p>
 
 ## 🐘 Banco de dados PostgreSQL
