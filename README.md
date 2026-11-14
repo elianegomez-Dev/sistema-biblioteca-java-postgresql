@@ -81,7 +81,7 @@ javac *.java
 java Main
 ```
 
-## 🖥️ Demonstração do projeto
+## 🖥️ Demonstração do projeto - java
 
 
 <p align="center">
@@ -111,6 +111,14 @@ Foram desenvolvidas consultas para:
 
 Os scripts SQL estão disponíveis na pasta `sql`.
 
+
+## 🖥️ Demonstração do projeto -  banco de dados PostgreSQL
+
+<p align="center">
+  <img width="1352" height="609" alt="Captura de tela 2026-21" src="https://github.com/user-attachments/assets/a561aa1e-5d41-4672-90ee-5713916f07ad" />
+ />
+ >
+
 ## 📚 Aprendizados
 
 Durante o desenvolvimento deste projeto, foram praticados:
@@ -127,6 +135,5 @@ Durante o desenvolvimento deste projeto, foram praticados:
 - Criação de tabelas e relacionamentos.
 - Consultas SQL com JOIN, GROUP BY e funções de agregação.
 
----
 
-**Projeto desenvolvido como atividade prática de aprendizagem em desenvolvimento de software.**
+
