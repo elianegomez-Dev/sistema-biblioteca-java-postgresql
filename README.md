@@ -87,6 +87,7 @@ java Main
 <p align="center">
   <img <img width="1357" height="550" alt="image" src="https://github.com/user-attachments/assets/cba4e92c-8922-4486-8432-258aedd34df5" >
 </p>
+imagem do VS Code com o programa executando.
 
 ## 🐘 Banco de dados PostgreSQL
 
@@ -116,7 +117,7 @@ Os scripts SQL estão disponíveis na pasta `sql`.
 <p align="center">
   <img width="1352" height="500" alt="Captura de tela 2026-21" src="https://github.com/user-attachments/assets/a561aa1e-5d41-4672-90ee-5713916f07ad">
 </p>
- 
+ imagem do pgAdmin com as três tabelas e o resultado da consulta.
 
 ## 📚 Aprendizados
 
