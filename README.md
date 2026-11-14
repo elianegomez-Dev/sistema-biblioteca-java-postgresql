@@ -78,6 +78,8 @@ No terminal, dentro da pasta do projeto, execute os comandos separadamente:
 
 ```powershell
 javac *.java
+```
+```powershell
 java Main
 ```
 
@@ -99,6 +101,8 @@ O banco de dados `biblioteca_db` utiliza três tabelas:
 - **emprestimo:** registra os itens emprestados, os usuários, as datas de retirada e devolução prevista, a devolução efetiva e as multas.
 
 As tabelas utilizam chaves primárias, chaves estrangeiras e restrições para manter a integridade dos dados.
+
+**Observação:** A versão Java também inclui a classe DVD como extensão do sistema. No banco de dados PostgreSQL, o cadastro de itens está configurado para livros e revistas.
 
 ## 🔎 Consultas SQL
 
